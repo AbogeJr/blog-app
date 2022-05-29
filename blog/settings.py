@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     #My Apps
     'accounts.apps.AccountsConfig',
     'myblog.apps.MyblogConfig',
+    'api.apps.ApiConfig',
+    #Third Party
+    'rest_framework',
     #Django defaults
     'django.contrib.admin',
     'django.contrib.auth',
