@@ -9,3 +9,7 @@ from myblog.models import Post
 class PostList(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+class PostCreate(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer    
