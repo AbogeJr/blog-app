@@ -6,10 +6,15 @@ from .serializer import PostSerializer
 from myblog.models import Post
 
 
-class PostList(generics.ListAPIView):
+class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
-class PostCreate(generics.ListCreateAPIView):
+
+# class PostDetail(generics.UpdateAPIView):
+#     queryset = Post.objects.all()
+#     serializer_class = PostSerializer   
+
+class PostRetrieveUpdate(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer    
